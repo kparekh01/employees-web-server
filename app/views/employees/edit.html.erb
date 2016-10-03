@@ -1,0 +1,16 @@
+<div>
+
+  <%= form_tag("/employees/#{@employee["id"]}", method: "patch") do %>
+    <%= label_tag(:first_name) %>
+    <%= text_field_tag(:first_name, @employee["first_name"]) %>
+
+    <%= label_tag(:last_name) %>
+    <%= text_field_tag(:last_name, @employee["last_name"]) %>
+
+    <%= label_tag(:email) %>
+    <%= text_field_tag(:email, @employee["email"]) %>
+
+    <%= submit_tag("Update!") %>
+  <% end %>
+
+</div>
